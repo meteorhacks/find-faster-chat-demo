@@ -1,8 +1,15 @@
 Meteor.methods({
-  addToGroup: function(groupName) {
-    // 
+  registerWith: function(groupName) {
     if(Meteor.userId()) {
       Groups.upsert({_id: groupName}, {$addToSet: {users: Meteor.userId()}});
+    } else {
+      throw new Meteor.Error(401, "Unauthorized!");
+    }
+  },
+
+  unregisterFrom: function(groupName) {
+    if(Meteor.userId()) {
+      Groups.update({_id: groupName}, {$pull: {users: Meteor.userId()}});
     } else {
       throw new Meteor.Error(401, "Unauthorized!");
     }

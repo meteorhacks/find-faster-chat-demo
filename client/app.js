@@ -3,7 +3,11 @@ JoinWith = function(group) {
 };
 
 RegisterWith = function(group) {
-  Meteor.call('addToGroup', group, ShowError);
+  Meteor.call('registerWith', group, ShowError);
+};
+
+UnregisterFrom = function(group) {
+  Meteor.call('unregisterFrom', group, ShowError);
 };
 
 Chat = function(message) {
