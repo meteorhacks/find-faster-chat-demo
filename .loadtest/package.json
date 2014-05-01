@@ -1,0 +1,7 @@
+{
+  "name": "apm-loadtest",
+  "dependencies": {
+    "ddp": "0.4.3"
+  },
+  "private": true
+}
