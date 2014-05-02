@@ -10,6 +10,8 @@ Load Testing Tool is an ad-hoc tool built with node `ddp` module. Meteor APM is 
 
 Load Testing tool is available in the `.loadtest` directory.
 
+CPU utilization is watched with this [simple script](https://gist.github.com/arunoda/8897526) based on Linux `/proc` filesystem.
+
 ## Deployment
 
 You can find the necessary [Meteor UP](https://github.com/arunoda/meteor-up) config files in the `.deploy` directory. In order to activate the `find-faster` you must use oplog with your Meteor App.
